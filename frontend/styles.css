@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+  background: url("https://b.thumbs.redditmedia.com/JMdJE1w9ouKWci4DT0s6BUkX7B9xKXS-DBgCb8F6L0g.png") no-repeat top center fixed;
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-item: center;
+}
+
+.apink-logo {
+  align-self: center;
+  margin-left: 20px;
+  margin-top: -10px;
+
+}
+.container {
+  margin-top: 50px;
+}
