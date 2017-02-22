@@ -12,13 +12,13 @@ export default class Tribute extends React.Component {
         <div className="container">
           <div className="jumbotron">
             <div className="row">
-              <div className="col-xs-12 col-md-12">
+              <div className="col-xs-6 col-md-6">
                 <Slide />
               </div>
             </div>
           </div>
-
         </div>
+        
       </div>
     );
   }

@@ -29,21 +29,49 @@ body{
 }
 
 .container {
+
+  width: 80%;
+  margin: 0 auto;
   margin-top: 50px;
 }
 
 .slides-container {
-  width: 80%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 20px 0;
 }
 
 .my-slides {
-  width: 100%;
+  width: 80%;
 
+}
+
+.slides-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.button-container {
+  display: flex;
+}
+
+.slides-button {
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: 0 5px;
+  align-self: center;
+  padding: 5px;
 }
 
 .active-slide {
   display: block;
+}
+
+.slides-arrow {
+  color: black;
 }
 
 .inactive-slide {
