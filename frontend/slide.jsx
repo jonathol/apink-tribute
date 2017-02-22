@@ -21,7 +21,7 @@ export default class Slide extends React.Component {
 
   plusDivs(n) {
     var current;
-    if (this.state.slideIndex + n == this.state.slideLength) {
+    if (this.state.slideIndex + n > this.state.slideLength) {
       current = 1;
     } else if (this.state.slideIndex + n < 1) {
       current = this.state.slideLength;
@@ -62,20 +62,17 @@ export default class Slide extends React.Component {
 */
 
   isActiveSlide(n) {
-    return "my-slides " + (n === this.state.slideIndex ? "active-slide" : "inactive-slide");
+    return "my-slides img-responsive center-block " + (n === this.state.slideIndex ? "active-slide" : "inactive-slide");
   }
 
   render () {
     return(
-      <div className="content display-container text-center">
-        <img className={this.isActiveSlide(1)} src="https://s-media-cache-ak0.pinimg.com/564x/69/70/2b/69702b54de24f269a04b5309f34e6f75.jpg" alt="Seven Springs of Apink album cover"/>
-        <img className={this.isActiveSlide(2)} src="https://upload.wikimedia.org/wikipedia/en/5/59/SnowPink.jpg" alt="Snow Pink album cover"/>
-        <img className={this.isActiveSlide(3)} src="https://kpopcolorcodedlyrics.files.wordpress.com/2012/05/une-annee.jpg" alt="Une Année album cover"/>
-        <img className={this.isActiveSlide(4)} src="http://st.cdjapan.co.jp/pictures/l/16/32/NEOIMP-8097.jpg" alt="Secret Garden album cover"/>
-        <img className={this.isActiveSlide(5)} src="https://upload.wikimedia.org/wikipedia/en/e/e9/PinkBlossom.jpg" alt="Pink Blossom album cover"/>
-        <img className={this.isActiveSlide(6)} src="http://www.allkpop.com/upload/2014/11/af_org/A-Pink_1417009986_af_org.jpg" alt="Pink Luv of Apink album cover"/>
-        <img className={this.isActiveSlide(7)} src="http://www.allkpop.com/upload/2015/07/af_org/A-Pink_1437252372_af_org.jpg" alt="Pink Memory album cover"/>
-        <img className={this.isActiveSlide(8)} src="https://upload.wikimedia.org/wikipedia/en/1/1e/Pink_Revolution_Cover.png" alt="Pink Revolution album cover"/>
+      <div className="slides-container">
+        <img className={this.isActiveSlide(1)} src="http://www.ktown4u.com/goods_files/SH0164/goods_images/000021/GD00020259.default.1.jpg" />
+        <img className={this.isActiveSlide(2)} src="https://pbs.twimg.com/media/CKvF6O0UsAAxzjt.jpg" />
+        <img className={this.isActiveSlide(3)} src="https://s-media-cache-ak0.pinimg.com/736x/87/a7/11/87a71154d3995580afa667f69669fdf6.jpg" />
+        <img className={this.isActiveSlide(4)} src="https://s-media-cache-ak0.pinimg.com/736x/25/0f/a6/250fa61c6416a8f42ec32b9de0813d24.jpg" />
+
 
         <div className="">
           <div className="" onClick={this.plusDivs.bind(this,-1)}>&#10094;</div>
