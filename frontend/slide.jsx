@@ -38,28 +38,9 @@ export default class Slide extends React.Component {
     this.setState({
       slideIndex: n
     });
-    showDivs(this.state.slidIndex);
+
   }
-/*
-  showDivs(n) {
-    var x = document.getElementsByClassName("my-slides");
-    var dots = document.getElementsByClassName("demo");
-    if (n > x.length){
-      this.setState({
-        slideIndex: 1
-      });
-    }
-    if (n < 1) {
-      this.setState({
-        slideIndex: x.length,
-      });
-    }
-    for (var i = 0; i < x.length; i++) {
-      x[i].style.display = "none";
-    }
-    x[this.state.slideIndex-1].style .display = "block";
-  }
-*/
+
 
   isActiveSlide(n) {
     return "my-slides img-responsive center-block " + (n === this.state.slideIndex ? "active-slide" : "inactive-slide");
