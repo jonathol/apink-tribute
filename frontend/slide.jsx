@@ -43,7 +43,11 @@ export default class Slide extends React.Component {
 
 
   isActiveSlide(n) {
-    return "my-slides img-responsive center-block " + (n === this.state.slideIndex ? "active-slide" : "inactive-slide");
+    return "my-slides img-responsive center-block img-thumbnail animated fadeIn " + (n === this.state.slideIndex ? "active-slide" : "inactive-slide");
+  }
+
+  isActiveButton(n) {
+    return "slides-button " + ( n === this.state.slideIndex ? "active-button" : "");
   }
 
   render () {
@@ -59,10 +63,10 @@ export default class Slide extends React.Component {
           <div className="slides-arrow" onClick={this.plusDivs.bind(this,-1)}>&#10094;</div>
 
           <div className="button-container">
-            <span className="slides-button" onClick={this.currentDiv.bind(this,1)}></span>
-            <span className="slides-button" onClick={this.currentDiv.bind(this,2)}></span>
-            <span className="slides-button" onClick={this.currentDiv.bind(this,3)}></span>
-            <span className="slides-button" onClick={this.currentDiv.bind(this,4)}></span>
+            <span className={this.isActiveButton(1)} onClick={this.currentDiv.bind(this,1)}></span>
+            <span className={this.isActiveButton(2)} onClick={this.currentDiv.bind(this,2)}></span>
+            <span className={this.isActiveButton(3)} onClick={this.currentDiv.bind(this,3)}></span>
+            <span className={this.isActiveButton(4)} onClick={this.currentDiv.bind(this,4)}></span>
           </div>
 
           <div className="slides-arrow" onClick={this.plusDivs.bind(this,1)}>&#10095;</div>

@@ -43,7 +43,6 @@ body{
 
 .my-slides {
   width: 80%;
-
 }
 
 .slides-nav {
@@ -52,8 +51,33 @@ body{
   width: 75%;
 }
 
+
 .button-container {
   display: flex;
+}
+
+.active-slide {
+  display: block;
+}
+
+.inactive-slide {
+  display: none;
+}
+
+.slides-arrow {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  -webkit-transition: color 1s;
+  -moz-transition:  color 1s;
+  -o-transition:  color 1s;
+  transition:  color 1s;
+}
+
+.slides-arrow:hover {
+  cursor: pointer;
+  color: #FF69B4;
+
 }
 
 .slides-button {
@@ -62,16 +86,17 @@ body{
   margin: 0 5px;
   align-self: center;
   padding: 5px;
+  -webkit-transition: background-color .5s;
+  -moz-transition:  background-color .5s;
+  -o-transition:  background-color .5s;
+  transition:  background-color .5s;
 }
 
-.active-slide {
-  display: block;
+.slides-button:hover {
+  cursor: pointer;
+  background-color: #FF69B4;
 }
 
-.slides-arrow {
-  color: black;
-}
-
-.inactive-slide {
-  display: none;
+.active-button {
+  background-color: #FF69B4;
 }
