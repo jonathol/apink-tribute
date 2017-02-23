@@ -43,6 +43,7 @@ body{
 
 .my-slides {
   width: 80%;
+  -vendor-animation-duration: 0.5s;
 }
 
 .slides-nav {
