@@ -5,7 +5,7 @@ export default class Slide extends React.Component {
     super();
 
     this.state = {
-      slideIndex: 1,
+      slideIndex: 0,
       slideLength: 0
     };
 
@@ -16,7 +16,8 @@ export default class Slide extends React.Component {
 
     this.setState({
       slideLength: x.length
-    })
+    });
+    this.carousel();
   }
 
   plusDivs(n) {
@@ -31,14 +32,25 @@ export default class Slide extends React.Component {
     this.setState({
       slideIndex: current
     });
-    //showDivs(this.state.slideIndex);
   }
 
   currentDiv(n) {
     this.setState({
       slideIndex: n
     });
+  }
 
+  carousel() {
+    if (this.state.slideIndex +1 > this.state.slideLength) {
+      this.setState({
+        slideIndex: 1
+      });
+    } else {
+      this.setState({
+        slideIndex: this.state.slideIndex + 1
+      });
+    }
+    setTimeout(this.carousel.bind(this), 5000);
   }
 
 
