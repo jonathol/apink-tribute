@@ -1,5 +1,6 @@
 import React from 'react';
 import Slide from './slide';
+import Feed from './feed';
 
 export default class Tribute extends React.Component {
   render() {
@@ -15,10 +16,13 @@ export default class Tribute extends React.Component {
               <div className="col-xs-6 col-md-6">
                 <Slide />
               </div>
+              <div className="col-xs-4 col-md-4">
+                <Feed />
+              </div>
             </div>
           </div>
         </div>
-        
+
       </div>
     );
   }

@@ -29,7 +29,6 @@ body{
 }
 
 .container {
-  width: 80%;
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -38,18 +37,17 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  background-color: white;
 }
 
 .my-slides {
-  width: 80%;
   -vendor-animation-duration: 1s;
 }
 
 .slides-nav {
   display: flex;
   justify-content: space-between;
-  width: 75%;
+  width: 90%;
 }
 
 
@@ -100,4 +98,9 @@ body{
 
 .active-button {
   background-color: #FF69B4;
+}
+
+.twtr-doc {
+  width: 100%;
+  height: auto;
 }

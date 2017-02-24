@@ -25,6 +25,10 @@
     "babel-preset-react": "^6.23.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-twitter-widgets": "^1.2.0",
     "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "json-loader": "^0.5.4"
   }
 }
